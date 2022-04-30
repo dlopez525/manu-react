@@ -1,0 +1,8 @@
+.headerApp,
+.menuApp {
+    background: linear-gradient(90deg, rgba(46,82,248,1) 0%, rgba(87,168,243,1) 100%) !important;
+}
+
+.menuItemApp {
+    color:  #fff;
+}
