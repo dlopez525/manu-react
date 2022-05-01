@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Tabs, PageHeader, Table, Input, Row, Col, Select, Radio, Space, Button } from 'antd';
 import { PlusOutlined, DownloadOutlined, UploadOutlined } from '@ant-design/icons';
 import * as API from '../../services/api';
@@ -52,7 +52,7 @@ export function ContentApp() {
                 ],
                 filterSearch: true,
                 onFilter: (value, record) => record.superior_division.startsWith(value),
-                width: '30%',
+                width: '25%',
             },
             {
                 title: 'Colaboradores',
@@ -81,13 +81,12 @@ export function ContentApp() {
                 ],
                 filterSearch: true,
                 onFilter: (value, record) => record.level.startsWith(value),
-                width: '30%',
             },
             {
                 title: 'Subdivisiones',
-                dataIndex: 'subdivisions',
-                key: 'subdivisions',
-                sorter: (a, b) => a.subdivisions - b.subdivisions,
+                dataIndex: 'sub_divisions_count',
+                key: 'sub_divisions_count',
+                sorter: (a, b) => a.sub_divisions_count - b.sub_divisions_count,
             },
             {
                 title: 'Embajadores',
@@ -159,7 +158,7 @@ export function ContentApp() {
                             </Col>
                         </Row>
                         
-                        <Table rowSelection={rowSelection} columns={columns} dataSource={dataSource}  showSizeChanger pagination={{ position: ['none', 'bottomRight'] }} />
+                        <Table rowSelection={rowSelection} size="middle" columns={columns} dataSource={dataSource}  showSizeChanger pagination={{ position: ['none', 'bottomRight'] }} />
                     </TabPane>
                     <TabPane tab="Colaboradores" key="2">
                         Colaboradores Tap
