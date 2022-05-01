@@ -5,4 +5,15 @@
 .menuItemApp {
   color: #fff;
 }
+.menuItemApp:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+.menuItemApp:after {
+  width: 0;
+}
+.menuItemApp.ant-menu-item-selected {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
 /*# sourceMappingURL=headerApp.css.map */

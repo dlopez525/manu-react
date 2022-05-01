@@ -18,10 +18,10 @@ export function HeaderApp() {
             <Menu
                 className="menuApp"
                 mode="horizontal"
-                defaultSelectedKeys={['1']}
+                defaultSelectedKeys={['0']}
             >
                 {navItems.map((item) => (
-                    <Menu.Item className="menuItemApp">
+                    <Menu.Item className="menuItemApp" key={item.name}>
                         {item.name}
                     </Menu.Item>
                 ))}
