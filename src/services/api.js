@@ -1,4 +1,4 @@
-const API_URL = 'http://52.54.130.200/api'
+const API_URL = 'https://daniellopez.dev/api'
 
 export async function getAllDivisions() {
     try {
